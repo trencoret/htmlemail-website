@@ -1,0 +1,25 @@
+{
+  "name": "Motherplate",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Lee Munroe"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leemunroe/motherplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    // "font-awesome": "fontawesome#^4.6.1",
+    "normalize-scss": "normalize.scss#^4.1.0",
+    "ideal-image-slider": "^1.5.1",
+    "slick-carousel": "^1.6.0",
+    "jquery": "^2.2.3",
+    "smooth-scroll": "^1.0.1"
+  }
+}

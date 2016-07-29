@@ -1,0 +1,231 @@
+//**
+// Content
+//**
+
+.full-section {
+  background: #fff;
+  padding: $padding/2;
+}
+
+.full-section-callout {
+  background: $gradient4;
+  background: -webkit-linear-gradient(-45deg, $gradient3, $gradient4);
+  background: linear-gradient(-45deg, $gradient3, $gradient4);   
+  color: #fff;
+  padding-left: $padding*2;
+  padding-right: $padding*2;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.wide-section {
+  margin-left: -80px;
+  margin-right: -80px;
+}
+
+.blockquote-avatar {
+  border-radius: 70px;
+  float: left;
+  margin: 0 20px 10px 0;
+  max-height: 70px;
+}
+
+.full-section-fullscreen {
+  padding-left: 0;
+  padding-right: 0;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+// Why section
+.why-svg {
+  fill: $primary-color;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+
+
+// Buy section
+.section-buy {
+  background: $gradient2;
+  background: -webkit-linear-gradient(-45deg, $gradient1 , $gradient2);
+  background: linear-gradient(-45deg, $gradient1 , $gradient2);     
+  color: white;
+  padding: $padding;
+  text-align: center;
+
+  em {
+    color: rgba(white, .8);
+  }
+
+  .btn-group {
+    margin-bottom: $padding/2;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+
+    strong {
+      font-size: 72px;
+    }
+  }
+}
+
+
+
+
+
+// Email preview section
+.section-preview {
+  background: url("../img/osx.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  min-height: 600px; 
+  position: relative;
+}
+
+.preview-email-desktop {
+  background: url("../img/desktop.png") no-repeat 0 0;
+  background-size: 100%;
+  box-shadow: 0 0 50px rgba(0,0,0,.2);
+  height: 437px;
+  left: 100px;
+  // position: absolute;
+  top: 50px;
+  width: 770px;
+
+  .preview-email {
+    height: 382px;
+    left: 193px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 55px;
+    width: 577px;
+  }
+}
+
+.preview-email-mobile {
+  background: url("../img/mobile.png") no-repeat 0 0;
+  background-size: 100%;
+  height: 444px;
+  right: 100px;
+  // position: absolute;
+  top: 50px;
+  width: 215px;
+
+  .preview-email {
+    height: 334px;
+    left: 13px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 52px;
+    width: 188px;
+  }
+}
+
+
+
+
+
+// Retina image
+.retina-image {
+  float: left;
+  shape-image-threshold: 0.5;
+  shape-margin: 20px;
+  shape-outside: url("../img/retina.png");
+}
+
+.retina-section {
+  padding: 0;
+
+  .span12 {
+    margin-bottom: 0;
+  }
+
+  h3:first-of-type {
+    margin-top: 10%;
+  }
+}
+
+
+
+
+
+// Preview section
+.preview-section {
+  figure {
+    float: left;
+    margin: 0 .5%;
+    text-align: center;
+    width: 11.5%;
+
+    img:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+      transform: scale(1.05);
+      transition: all .2s ease-in-out;
+      z-index: 10;
+    }
+
+    a {
+      cursor: zoom-in;
+    }
+  }
+}
+
+
+
+
+// Responsive styles if needed
+@include responsive($big-break) {
+  .full-section {
+    padding: $responsive-padding;
+  }
+
+  // Retina image
+  .retina-image {
+    float: none;
+    shape-outside: none;
+  }
+
+  // Preview section
+  .preview-section {
+    figure {
+      margin: 0 1% 20px;
+      width: 23%;
+    }
+  }
+
+  // Footer
+  footer {
+    padding: 10px 0;
+  }
+}
+@include responsive($small-break) {
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }
