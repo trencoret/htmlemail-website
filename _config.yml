@@ -29,4 +29,4 @@ markdown: kramdown
 theme: minima
 
 # Exclude
-exclude: ['node_modules']
+exclude: ['node_modules', 'bower_components']
