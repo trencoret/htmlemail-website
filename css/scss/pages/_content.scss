@@ -90,6 +90,19 @@
       font-size: 72px;
     }
   }
+
+  h4 {
+    margin-bottom: 15px;
+  }
+  
+  h4:after {
+    background: rgba(255,255,255,.6);
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 10px auto 0;
+    width: 20px;
+  }
 }
 
 
