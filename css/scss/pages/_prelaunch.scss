@@ -6,9 +6,13 @@
   box-sizing: border-box;
   height: 100%;
 
-  body, header {
+  body {
+    height: 100%;
+  }
+
+  header {
     box-sizing: border-box;
-    height: auto;
+    min-height: 100%;
   }
 }
 
