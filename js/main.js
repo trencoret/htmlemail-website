@@ -13,4 +13,8 @@ $(document).ready(function(){
     dots: true,
   });
 
+  // Tomorrow's date
+  $("#tomorrow").html(moment().add(1, 'days').format('dddd MMMM Do'));
+  console.log(moment().add(1, 'days').format('dddd'));
+
 });
