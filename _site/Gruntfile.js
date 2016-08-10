@@ -88,9 +88,8 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'bower_components/jquery/dist/jquery.slim.min.js', 
-          'bower_components/slick-carousel/slick/slick.min.js', 
           'bower_components/typed.js/dist/typed.min.js', 
-          'bower_components/smooth-scroll/smooth-scroll.min.js', 
+          'bower_components/smooth-scroll/dist/js/smooth-scroll.min.js', 
           'bower_components/moment/min/moment.min.js', 
           'js/main.js'
         ],

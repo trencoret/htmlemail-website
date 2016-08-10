@@ -8,13 +8,10 @@ $(document).ready(function(){
     loop: true
   });
 
-  // Email preview slideshow
-  $('#slideshow').slick({
-    dots: true,
-  });
-
   // Tomorrow's date
   $("#tomorrow").html(moment().add(1, 'days').format('dddd MMMM Do'));
-  console.log(moment().add(1, 'days').format('dddd'));
+
+  // Smooth scroll
+  smoothScroll.init();
 
 });
