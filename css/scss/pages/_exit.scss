@@ -28,6 +28,9 @@
 
 // Responsive styles if needed
 @include responsive($big-break) {
+  .exit-modal {
+    width: auto;
+  }
 }
 @include responsive($small-break) {
 }
