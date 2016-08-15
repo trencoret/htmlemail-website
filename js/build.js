@@ -510,4 +510,20 @@ $(document).ready(function(){
   // Smooth scroll
   smoothScroll.init();
 
+  // Show exit monitor
+  var closeExit = false;
+  $('body').mouseleave(function() {
+    if (!closeExit){
+      $('.exit-overlay').show();
+      closeExit = true;
+      $('.exit-overlay input').focus();
+    }
+  })
+
+  // Close exit monitor
+  $('.js-close-exit-overlay').click(function(event){
+    $('.exit-overlay').hide();
+    event.preventDefault();
+  });
+
 });
