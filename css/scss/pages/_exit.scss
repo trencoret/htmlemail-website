@@ -1,0 +1,39 @@
+//**
+// Exit Overlay
+//**
+
+.exit-overlay {
+  background: rgba(0, 0, 0, .8);
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.exit-modal {
+  background: #fff;
+  border: 20px solid #000;
+  margin: 50px auto;
+  overflow: scroll;
+  padding: $padding/4;
+  text-align: center;
+  width: 700px;
+}
+
+
+// Responsive styles if needed
+@include responsive($big-break) {
+}
+@include responsive($small-break) {
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }
