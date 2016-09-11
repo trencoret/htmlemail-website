@@ -17,7 +17,7 @@ $(document).ready(function(){
   // Show exit monitor
   var closeExit = false;
   $('body').mouseleave(function() {
-    if (!closeExit){
+    if (!closeExit || Cookies.get('htmlemailExit') == null) { 
       $('.exit-overlay').show();
       closeExit = true;
       $('.exit-overlay input').focus();
@@ -27,6 +27,7 @@ $(document).ready(function(){
   // Close exit monitor
   $('.js-close-exit-overlay').click(function(event){
     $('.exit-overlay').hide();
+    Cookies.set("htmlemailExit", 1, { expires : 30 });
     event.preventDefault();
   });
 

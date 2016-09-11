@@ -91,6 +91,7 @@ module.exports = function(grunt) {
           'bower_components/typed.js/dist/typed.min.js', 
           'bower_components/smooth-scroll/dist/js/smooth-scroll.min.js', 
           'bower_components/moment/min/moment.min.js', 
+          'node_modules/js-cookie/src/js.cookie.js', 
           'js/main.js'
         ],
         dest: 'js/build.js',
