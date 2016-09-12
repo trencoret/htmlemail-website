@@ -15,7 +15,7 @@ $(document).ready(function(){
   smoothScroll.init();
 
   // Show exit monitor
-  var closeExit = false;
+  // var closeExit = false;
   $('body').mouseleave(function() {
     if (Cookies.get('htmlemailExit') == null) { 
       $('.exit-overlay').show();
