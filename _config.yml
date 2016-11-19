@@ -24,6 +24,7 @@ url: "https://htmlemail.io" # the base hostname & protocol for your site
 enforce_ssl: htmlemail.io
 twitter_username: htmlemailio
 github_username:  leemunroe
+permalink: /blog/:title
 
 # Build settings
 markdown: kramdown
