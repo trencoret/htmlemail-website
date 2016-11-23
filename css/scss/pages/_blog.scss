@@ -1,0 +1,61 @@
+//**
+// Blog
+//**
+
+.container--blog {
+  max-width: 800px;
+
+  h1 {
+    background: $gradient2;
+    background: -webkit-linear-gradient(0deg, $gradient1, $gradient2);
+    background: linear-gradient(0deg, $gradient1, $gradient2); 
+    -webkit-background-clip: text;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    margin: $padding 0 $padding/4;
+    text-align: left;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    background: transparent;
+    color: $quaternary-color; 
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 0 $padding/4;
+    text-align: left;
+    -webkit-text-fill-color: currentcolor; 
+
+    &:after {
+      background: $gradient1;
+      content: "";
+      display: block;
+      height: 3px;
+      margin: 10px 0 20px;
+      width: 50px;
+    }
+  }
+
+  h3 {
+    color: inherit;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: $padding/6;
+
+    &:after {
+      background: transparent;
+      height: 0;
+      margin: 0;
+      width: 0;
+    }
+  }
+
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }
