@@ -34,12 +34,19 @@
 
 // Logo
 .logo {
+  height: 50px;
   margin: 0 auto $padding/2;
   text-align: center;
 }
 
+.logo--inline {
+  height: 20px;
+  margin: 12px 0;
+  text-align: left;
+}
+
 .logo-svg {
-  height: 50px;
+  height: 100%;
 }
 
 
