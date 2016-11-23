@@ -1,6 +1,5 @@
 ---
-layout: blog
-body: blog
+layout: page
 title: HTML Email Blog
 description: Articles on how to set up HTML email templates and how to send emails for developers, designers and marketers
 ---
@@ -12,24 +11,11 @@ description: Articles on how to set up HTML email templates and how to send emai
 
 <ul class="posts">
 {% for post in paginator.posts %}
-  {% unless post.draft %}
     <li>
-    <a href="{{site.baseurl}}{{ post.url }}">
+    <a href="{{ post.url }}">
     	<span class="post__title">{{ post.title }}</span>
     	<span class="post__excerpt">{{ post.excerpt | strip_html | truncatewords:30 }}</span>
     </a>
     </li>
-  {% endunless %}
 {% endfor %}
 </ul>
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{site.baseurl}}{{ paginator.previous_page_path }}" class="previous">&laquo; Previous</a>
-  {% endif %}
-  <span class="page_number ">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{site.baseurl}}{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
-  {% endif %}
-</div>

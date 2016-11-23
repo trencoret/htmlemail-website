@@ -32,3 +32,8 @@ theme: minima
 
 # Exclude
 exclude: ['node_modules', 'bower_components']
+
+# Gems
+gems: [jekyll-paginate]
+paginate: 100
+paginate_path: /blog/page/:num

@@ -15,12 +15,12 @@
 </head>
 <body>
 
-<header role="banner" class="hero">
+<header role="banner" class="header">
   <div class="container">
     <div class="group">
       <div class="span6">
         <div class="logo logo--inline">
-          <svg class="logo-svg"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#src--logo-inline"></use></svg>
+          <a href="/"><svg class="logo-svg"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#src--logo-inline"></use></svg></a>
         </div>
       </div>
       <div class="span6 text-right">
@@ -34,6 +34,7 @@
 
   <h1>HTML Email Blog</h1>
 
+
   <form class="search-form" action="http://www.google.com/search" method="get">
   <input type="search" name="q" placeholder="Search the blog" autofocus>
   <input type="hidden" name="sitesearch" value="htmlemail.io">
@@ -41,36 +42,15 @@
 
 <ul class="posts">
 
+    <li>
+    <a href="/blog/welcome">
+    	<span class="post__title">Welcome to Jekyll!</span>
+    	<span class="post__excerpt">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways,...</span>
+    </a>
+    </li>
+
 </ul>
 
-<!-- Pagination links -->
-<div class="pagination">
-  
-  <span class="page_number ">Page  of </span>
-  
-</div>
-
-  <div id="disqus_thread"></div>
-  <script>
-
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = '//html-email.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
 
 </div>
 

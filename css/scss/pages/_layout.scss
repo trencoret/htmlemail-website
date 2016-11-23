@@ -2,11 +2,15 @@
 // Main Layout Styles
 //**
 
-.hero {
+.header {
   background: $gradient2;
   background: -webkit-linear-gradient(-45deg, $gradient1 , $gradient2);
   background: linear-gradient(-45deg, $gradient1 , $gradient2);     
   color: white;
+  padding: $padding/4 0;
+}
+
+.header--hero {
   padding: $padding/2;
   text-align: center;
 
