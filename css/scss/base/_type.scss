@@ -34,17 +34,33 @@ h5 {
   font-family: $heading-stack;
 }
 
-h1 {
+h1,
+.h1 {
+  background: $gradient2;
+  background: -webkit-linear-gradient(0deg, $gradient1, $gradient2);
+  background: linear-gradient(0deg, $gradient1, $gradient2); 
+  -webkit-background-clip: text;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  margin: 0 0 $padding/4;
+  margin: 0 0 $padding/2;
   text-align: center;
+  -webkit-text-fill-color: transparent;
 
-  em {
-    font-size: 24px;
+  &--banner {
+    background: transparent;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
+    margin: 0 0 $padding/4;
+    text-align: center;
+    -webkit-text-fill-color: currentcolor; 
+
+    em {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 200;
+    }
   }
 }
 
@@ -81,8 +97,8 @@ h3 {
 h4 {
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
-  margin: 0 0 25px;
+  font-weight: 800;
+  margin-bottom: $padding/6;
 }
 
 h5 {
