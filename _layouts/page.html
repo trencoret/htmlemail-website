@@ -1,0 +1,27 @@
+{% include head.html %}
+
+<header role="banner" class="header">
+  <div class="container">
+    <div class="group">
+      <div class="span6">
+        <div class="logo logo--inline">
+          <a href="/"><svg class="logo-svg"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#src--logo-inline"></use></svg></a>
+        </div>
+      </div>
+      <div class="span6 text-right">
+        <a href="/" class="btn btn-primary btn-primary_hero">Get Email Templates</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container container--blog">
+
+  <h1>{{ page.title }}</h1>
+
+
+  {{ content }}
+
+</div>
+
+{% include foot.html %}

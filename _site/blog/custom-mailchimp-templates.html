@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to use custom HTML email templates with Mailchimp</title>
+  <meta name="description" content="How to use custom HTML email templates with Mailchimp">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preload" href="/img/symbol/svg/sprite.symbol.svg" as="image">
+  <link rel="canonical" href="https://htmlemail.io" />
+  <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+<body>
+
+<header role="banner" class="header">
+  <div class="container">
+    <div class="group">
+      <div class="span6">
+        <div class="logo logo--inline">
+          <a href="/"><svg class="logo-svg"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#src--logo-inline"></use></svg></a>
+        </div>
+      </div>
+      <div class="span6 text-right">
+        <a href="/" class="btn btn-primary btn-primary_hero">Get Email Templates</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container container--blog">
+
+  <h1>How to use custom HTML email templates with Mailchimp</h1>
+
+
+  <p>Congratulations! You’ve just downloaded your set of <a href="http://htmlemail.io">responsive HTML email templates</a> and are ready to start sending professional looking emails from your ESP (Email Service Provider). Now you need to put them into Mailchimp so you can use them.</p>
+
+<p><a href="http://mailchimp.com">Mailchimp</a> is a great solution for an ESP and includes features for sending marketing campaigns, 3rd party integrations, marketing automation and a powerful developer API.</p>
+
+<p>With Mailchimp you can either set your template as a reusable template, or if you just need to send a one off campaign you can easily copy the templates across.</p>
+
+<h3 id="prepare-your-files-for-mailchimp-as-a-zip-file">Prepare your files for Mailchimp as a zip file</h3>
+
+<p>Mailchimp supports importing templates via a zip file, which is very convenient for including the CSS and image assets. Unfortunately they only support importing one at a time.</p>
+
+<p>Before we start, lets zip up the template(s) you want to use.</p>
+
+<ol>
+  <li>Select the files you want to zip, which should include:
+    <ul>
+      <li>Non-inlined HTML template e.g. <code class="highlighter-rouge">newsletter.html</code></li>
+      <li><code class="highlighter-rouge">main.css</code> stylesheet</li>
+      <li><code class="highlighter-rouge">/img</code> directory</li>
+    </ul>
+  </li>
+  <li>Compress or zip these files into one zip file</li>
+  <li>Rename the file so you know what it is</li>
+</ol>
+
+<figure class="blog--image">
+  <img src="/img/mailchimp-zip.gif" alt="Zip your email files" width="300" />
+</figure>
+
+<p>That should be you good to go with your email template in one zip file.</p>
+
+<h3 id="how-to-use-custom-email-templates-for-a-one-off-campaign">How to use custom email templates for a one off campaign</h3>
+
+<h4 id="create-a-new-campaign">1. Create a new campaign</h4>
+
+<ul>
+  <li>Open your Mailchimp dashboard</li>
+  <li>Go to <code class="highlighter-rouge">Camgaigns</code> &gt; <code class="highlighter-rouge">Create Campaign</code></li>
+  <li>Select the type of campaign to send e.g. <code class="highlighter-rouge">Regular Campaign</code></li>
+  <li>Choose the list you plan on sending it to</li>
+  <li>Enter your campaign information</li>
+</ul>
+
+<h4 id="upload-your-email-template">2. Upload your email template</h4>
+
+<p>When asked to select a template:</p>
+
+<ul>
+  <li>Choose <code class="highlighter-rouge">Code your own</code> &gt; <code class="highlighter-rouge">Import from zip</code></li>
+  <li>Select your zip file that includes the template</li>
+  <li>Wait for it to upload</li>
+</ul>
+
+<figure class="blog--image">
+  <img src="/img/mailchimp-upload.gif" alt="Upload your zip file" width="500" />
+</figure>
+
+<h4 id="edit-your-template">3. Edit your template</h4>
+
+<p>Now you can replace the content with your content. Remember to do the following:</p>
+
+<ul>
+  <li>Headings</li>
+  <li>Body text</li>
+  <li>Links</li>
+  <li>Images</li>
+  <li>Social links</li>
+  <li>Preheader text</li>
+  <li>Unsubscribe tag</li>
+  <li>Address tag</li>
+</ul>
+
+<p>Turn the inline CSS setting on so that your styles are automatically inlined before sending.</p>
+
+<figure class="blog--image">
+  <img src="/img/mailchimp-inline.png" alt="Inline your CSS" width="300" />
+</figure>
+
+<p>Include Mailchimp’s unsubscribe tag in your template. The tag is <code class="highlighter-rouge">*|UNSUB|*</code>. So your unsubscribe line in the footer should look something like:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>Don't like these emails? <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"*|UNSUB|*"</span><span class="nt">&gt;</span>Unsubscribe<span class="nt">&lt;/a&gt;</span>.
+</code></pre>
+</div>
+
+<p>Mailchimp also requires you to include their address tag. To do this, replace the address in your footer with their tag <code class="highlighter-rouge">*|LIST:ADDRESSLINE|*</code>.</p>
+
+<p>Depending on whether you’re paying for Mailchimp’s service or not, you may be required to include their rewards badge in your footer with their tag <code class="highlighter-rouge">&lt;center&gt;*|REWARDS|*&lt;/center&gt;</code>.</p>
+
+<p>Now test it. This step is VERY important.</p>
+
+<figure class="blog--image">
+  <img src="/img/mailchimp-test.png" alt="Test your email" width="300" />
+</figure>
+
+<p>If all looks good you should be ready to send.</p>
+
+<figure class="blog--image">
+  <img src="/img/mailchimp-sent.png" alt="Send your campaign" width="300" />
+</figure>
+
+<h3 id="how-to-make-your-templates-reusable">How to make your templates reusable</h3>
+
+<ul>
+  <li>Open your Mailchimp dashboard</li>
+  <li>Go to <code class="highlighter-rouge">Templates</code> &gt; <code class="highlighter-rouge">Create Template</code></li>
+  <li>Repeat the steps above with regards to importing your template from a zip file, or you can paste in the code if you prefer</li>
+  <li>Once your template is uploaded, use <a href="http://kb.mailchimp.com/templates/code/getting-started-with-mailchimps-template-language">Mailchimp tags</a> to identify what parts of the template are editable</li>
+</ul>
+
+<p>For example, if you want to make the whole of the body section editable, add <code class="highlighter-rouge">mc:edit="body"</code> to the HTML element.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"0"</span> <span class="na">cellpadding=</span><span class="s">"0"</span> <span class="na">cellspacing=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"main"</span> <span class="na">mc:edit=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+This content is then editable by any one when using this template
+<span class="nt">&lt;/table&gt;</span>
+</code></pre>
+</div>
+
+<p>Or if you want to be more granular about it and only let people edit certain lines of text:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;tr&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"0"</span> <span class="na">cellpadding=</span><span class="s">"0"</span> <span class="na">cellspacing=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"align-center"</span> <span class="na">mc:edit=</span><span class="s">"heading-1"</span><span class="nt">&gt;</span>Across the Universe<span class="nt">&lt;/h1&gt;</span>
+          <span class="nt">&lt;p&gt;&lt;img</span> <span class="na">src=</span><span class="s">"img/photo1.jpeg"</span> <span class="na">alt=</span><span class="s">"Helpful placeholder image text"</span> <span class="na">width=</span><span class="s">"520"</span> <span class="na">class=</span><span class="s">"img-responsive img-block"</span> <span class="na">mc:edit=</span><span class="s">"image-1"</span><span class="nt">&gt;&lt;/p&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">mc:edit=</span><span class="s">"description-1"</span><span class="nt">&gt;</span>Words are flowing out, like endless rain into a paper cup. They slither while they pass, they slip away across the universe.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span>
+</code></pre>
+</div>
+
+<p>For more information on editable templates read Mailchimp’s <a href="http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language">Create Editable Content Areas with MailChimp’s Template Language</a></p>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ul>
+  <li><a href="http://kb.mailchimp.com/templates/code/how-to-import-a-custom-html-template">Mailchimp: How to Import a Custom HTML Template</a></li>
+  <li><a href="http://kb.mailchimp.com/templates/code/getting-started-with-mailchimps-template-language">Getting Started with MailChimp’s Template Language</a></li>
+</ul>
+
+
+
+  <div class="social-sharing-container">
+    <!-- Sharingbutton Facebook -->
+    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=/blog/custom-mailchimp-templates" target="_blank" aria-label="Share on Facebook">
+      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+            <g>
+                <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
+            </g>
+        </svg>
+        </div>Share on Facebook</div>
+    </a>
+
+    <!-- Sharingbutton Twitter -->
+    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=/blog/custom-mailchimp-templates" target="_blank" aria-label="Share on Twitter">
+      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+            <g>
+                <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
+            </g>
+        </svg>
+        </div>Share on Twitter</div>
+    </a>
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = '//html-email.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+
+</div>
+
+ 
+  <footer>
+    <div class="container"> 
+      <div class="group">
+        <div class="span6">
+          <h3>Sign Up For Updates</h3>
+          <p>In the meantime sign up to our newsletter. Once you confirm we'll send you a sample of a simple responsive HTML email so you can see it in action.</p>
+          <form action="//leemunroe.us1.list-manage.com/subscribe/post?u=1998df7f0f3a32bdf922938ca&amp;id=4bf2c8f8b9" method="post" class="subscribe-form__footer">
+            <input type="email" value="" name="EMAIL" id="mce-EMAIL"> <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+        <div class="span6">
+          <ul>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="https://github.com/leemunroe/htmlemail/issues">Support / Issue Tracker</a></li>
+            <li><a href="https://github.com/leemunroe/htmlemail/">Documentation</a></li>
+            <li><a href="mailto:hello@htmlemail.io">hello@htmlemail.io</a></li>
+            <li><a href="http://twitter.com/htmlemailio">@htmlemailio</a></li>
+          </ul>
+          <p>Thanks to <a href="https://twitter.com/g13nnsmith">Glenn</a>, <a href="https://twitter.com/TedGoas">Ted</a>, <a href="https://twitter.com/dandenney">Dan</a>, <a href="https://twitter.com/stigm">Stig</a>, <a href="http://Sivanweb.com">Daniel</a> and <a href="https://twitter.com/eddywashere">Eddy</a> for their code reviews.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/build.js"></script>
+
+  <!-- GA -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-1284993-68', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <!-- Adroll -->
+  <!-- <script type="text/javascript">
+    adroll_adv_id = "EWLKBNFNZFB73PFSWPRSHB";
+    adroll_pix_id = "ZDUMIDPDJRBRHMOXVUR5GM";
+    (function () {
+      var _onload = function(){
+        if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+        if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+        var scr = document.createElement("script");
+        var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+        scr.setAttribute('async', 'true');
+        scr.type = "text/javascript";
+        scr.src = host + "/j/roundtrip.js";
+        ((document.getElementsByTagName('head') || [null])[0] ||
+          document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+    }());
+  </script> -->
+
+  <!-- FullStory -->
+  <script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'www.fullstory.com';
+  window['_fs_org'] = '24AT4';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+      g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+      o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+      d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+      ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+  })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+
+
+</body>
+</html>
