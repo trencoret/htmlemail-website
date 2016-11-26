@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTML Email How Tos, Tips and Tutorials
+title: HTML Email Tips and Tutorials
 description: Articles on how to set up HTML email templates and how to send emails for developers, designers and marketers
 ---
 
@@ -12,8 +12,8 @@ description: Articles on how to set up HTML email templates and how to send emai
 <ul class="posts">
 {% for post in paginator.posts %}
     <li>
-    <a href="{{ post.url }}">
-    	<span class="post__title">{{ post.title }}</span>
+    <a href="{{ post.url }}" class="post__title">
+    	{{ post.title }}
     </a>
     </li>
 {% endfor %}

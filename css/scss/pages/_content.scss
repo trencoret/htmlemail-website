@@ -83,7 +83,7 @@
     margin-bottom: $padding/2;
   }
 
-  h1 {
+  .heading-price {
     margin-bottom: 15px;
 
     strong {
@@ -102,6 +102,24 @@
     height: 2px;
     margin: 10px auto 0;
     width: 20px;
+  }
+}
+
+.heading-price {
+  background: transparent;
+  color: #fff;
+  font-family: $heading-stack;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 $padding/4;
+  text-align: center;
+  -webkit-text-fill-color: currentcolor; 
+
+  em {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
   }
 }
 

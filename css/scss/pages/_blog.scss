@@ -13,6 +13,38 @@
   }
 }
 
+.blog--image {
+  text-align: center;
+}
+
+.posts {
+  list-style: none;
+  margin: $padding/2 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+      .post__title {
+        border-top: 1px solid rgba($subtle-color, .2);
+      }
+    }
+  }
+
+  .post__title {
+    border-bottom: 1px solid rgba($subtle-color, .2);
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba($subtle-color, .1)
+    }
+  }
+}
+
 
 
 
