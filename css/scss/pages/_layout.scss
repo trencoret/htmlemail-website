@@ -87,6 +87,11 @@ footer {
   .hero {
     padding: $responsive-padding;
   }
+
+  .logo--inline {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @include responsive($small-break) {
 }
