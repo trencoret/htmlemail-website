@@ -7,7 +7,10 @@
   background: -webkit-linear-gradient(-45deg, $gradient1 , $gradient2);
   background: linear-gradient(-45deg, $gradient1 , $gradient2);     
   color: white;
-  padding: $padding/4 0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header--hero {

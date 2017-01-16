@@ -4,6 +4,7 @@
 
 .container--blog {
   max-width: 800px;
+  padding-top: 60px;
 
   h1,
   h2 {
@@ -59,7 +60,14 @@
 // @include mobilefirst($big-break) {
 // }
 @include responsive($small-break) {
+  .header {
+    position: relative;
+    top: auto;
+  }
+
   .container--blog {
+    padding-top: 0;
+    
     h1 {
       font-size: 28px;
       margin-top: 20px;
