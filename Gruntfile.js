@@ -130,6 +130,11 @@ module.exports = function(grunt) {
         'watch',
         'shell:jekyllServe'
       ],
+      serveDrafts: [
+        'sass',
+        'watch',
+        'shell:jekyllDrafts'
+      ],
       options: {
         logConcurrentOutput: true
       }
@@ -156,6 +161,9 @@ module.exports = function(grunt) {
       },
       jekyllServe: {
         command: 'jekyll serve'
+      },
+      jekyllDrafts: {
+        command: 'jekyll serve --drafts'
       }
     }
  
@@ -170,4 +178,8 @@ module.exports = function(grunt) {
 
   // Register build as the default task fallback
   grunt.registerTask('default', 'serve');
+
+  // Serve with drafts too
+  grunt.registerTask('drafts', ['concurrent:serveDrafts']);
+
 };
