@@ -14,6 +14,12 @@
   }
 }
 
+.header--blog {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .blog--image {
   text-align: center;
 }
@@ -67,7 +73,7 @@
 
   .container--blog {
     padding-top: 0;
-    
+
     h1 {
       font-size: 28px;
       margin-top: 20px;
