@@ -62,6 +62,32 @@
   margin-bottom: $padding/2;
 }
 
+
+
+
+
+// Subscribe footer of post
+.post-subscribe {
+  background: $tertiary-color;
+  color: #fff;
+  margin-bottom: $padding/4;
+  padding: 20px;
+  text-align: center;
+
+  form {
+    margin-bottom: $padding/4;
+  }
+
+  h3 {
+    color: inherit;
+
+    &:after {
+      background: none;
+      height: 0;
+    }
+  }
+}
+
 // Mobile first styles if needed
 // @include mobilefirst($big-break) {
 // }
