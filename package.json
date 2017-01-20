@@ -16,6 +16,7 @@
     "grunt-shell": "^1.1.2",
     "grunt-svg-sprite": "^1.2.19",
     "js-cookie": "^2.1.3",
+    "lity": "^2.2.2",
     "matchdep": "*"
   }
 }

@@ -11,9 +11,6 @@ $(document).ready(function(){
   // Tomorrow's date
   $("#tomorrow").html(moment().add(1, 'days').format('dddd MMMM Do'));
 
-  // Smooth scroll
-  smoothScroll.init();
-
   // Show exit monitor
   // var closeExit = false;
   $('body').mouseleave(function() {

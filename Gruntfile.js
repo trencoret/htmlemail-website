@@ -87,9 +87,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'bower_components/jquery/dist/jquery.slim.min.js', 
+          'bower_components/jquery/dist/jquery.min.js', 
           'bower_components/typed.js/dist/typed.min.js', 
-          'bower_components/smooth-scroll/dist/js/smooth-scroll.min.js', 
+          'bower_components/smooth-scroll/smooth-scroll.min.js', 
           'bower_components/moment/min/moment.min.js', 
           'node_modules/js-cookie/src/js.cookie.js', 
           'node_modules/lity/dist/lity.min.js', 
@@ -109,12 +109,11 @@ module.exports = function(grunt) {
         '*.html',
         'js/**/*.js',
         'css/**/*.scss',
-        'img/**/*.{png,jpg,gif,svg}'
+        'img/*.{png,jpg,gif}'
       ],
       tasks: [
         'sass',
         'postcss',
-        'svg_sprite',
         'concat'
       ]
     },
@@ -127,6 +126,9 @@ module.exports = function(grunt) {
     concurrent: {
       serve: [
         'sass',
+        'postcss',
+        'concat',
+        'svg_sprite',
         'watch',
         'shell:jekyllServe'
       ],
