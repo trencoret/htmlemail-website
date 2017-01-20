@@ -24,7 +24,7 @@
 
   <div class="social-sharing-container">
     <!-- Sharingbutton Facebook -->
-    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{ page.url }}" target="_blank" aria-label="Share on Facebook">
+    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" aria-label="Share on Facebook">
       <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
             <g>
@@ -35,7 +35,7 @@
     </a>
 
     <!-- Sharingbutton Twitter -->
-    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url={{ page.url }}" target="_blank" aria-label="Share on Twitter">
+    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank" aria-label="Share on Twitter">
       <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
             <g>
