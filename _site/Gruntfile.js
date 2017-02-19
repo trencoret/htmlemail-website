@@ -89,7 +89,7 @@ module.exports = function(grunt) {
         src: [
           'bower_components/jquery/dist/jquery.min.js', 
           'bower_components/typed.js/dist/typed.min.js', 
-          'bower_components/smooth-scroll/smooth-scroll.min.js', 
+          'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js', 
           'bower_components/moment/min/moment.min.js', 
           'node_modules/js-cookie/src/js.cookie.js', 
           'node_modules/lity/dist/lity.min.js', 
