@@ -110,18 +110,47 @@ module.exports = function(grunt) {
 
     //Watches files and folders for us
     watch: {
-      files: [
-        '*.html',
-        'js/**/*.js',
-        'css/**/*.scss',
-        'img/*.{png,jpg,gif}'
-      ],
-      tasks: [
-        'sass',
-        'postcss',
-        'imagemin',
-        'concat'
-      ]
+      css: {
+        files: [
+          'css/**/*.scss'
+        ],
+        tasks: [
+          'sass',
+          'postcss'
+        ]
+      },
+      scripts: {
+        files: [
+          'js/**/*.js'
+        ],
+        tasks: [
+          'concat'
+        ]
+      },
+      html: {
+        files: [
+          '**/*.{html,markdown,md}','!_site'
+        ],
+        tasks: [
+          'shell:jekyllBuild'
+        ]
+      },
+      images: {
+        files: [
+          'img/*.{png,jpg,gif}'
+        ],
+        tasks: [
+          'imagemin'
+        ]
+      },
+      svg: {
+        files: [
+          'img/src/*.{svg}'
+        ],
+        tasks: [
+          'svg_sprite'
+        ]
+      }
     },
 
 
@@ -136,8 +165,8 @@ module.exports = function(grunt) {
         'concat',
         'imagemin',
         'svg_sprite',
+        'shell:jekyllServe',
         'watch',
-        'shell:jekyllServe'
       ],
       serveDrafts: [
         'sass',
@@ -153,17 +182,6 @@ module.exports = function(grunt) {
 
 
 
-    // Server
-    // connect: {
-    //   server: {
-    //     options: {
-    //       livereload: true,
-    //       base: '',
-    //       port: 4001
-    //     }
-    //   }
-    // }
-    // shell commands for use in Grunt tasks
     shell: {
       jekyllBuild: {
         command: 'jekyll build'
@@ -178,8 +196,6 @@ module.exports = function(grunt) {
  
   });
  
-  //grunt serve
-  // grunt.registerTask('default', ['connect:server','watch']);
   // Register the grunt serve task
   grunt.registerTask('serve', [
     'concurrent:serve'
