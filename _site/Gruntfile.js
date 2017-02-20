@@ -85,7 +85,7 @@ module.exports = function(grunt) {
 
 
 
-    // JS
+    // JS Concat
     concat: {
       options: {
         separator: ';',
@@ -102,6 +102,15 @@ module.exports = function(grunt) {
         ],
         dest: 'js/build.js',
       },
+    },
+
+    // JS Minify
+    uglify: {
+      my_target: {
+        files: {
+          'js/build.js': ['js/build.js']
+        }
+      }
     },
  
 
@@ -124,7 +133,7 @@ module.exports = function(grunt) {
           'js/**/*.js'
         ],
         tasks: [
-          'concat'
+          'concat', 'uglify'
         ]
       },
       html: {
@@ -163,6 +172,7 @@ module.exports = function(grunt) {
         'sass',
         'postcss',
         'concat',
+        'uglify',
         'imagemin',
         'svg_sprite',
         'shell:jekyllServe',
