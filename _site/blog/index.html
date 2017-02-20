@@ -4,6 +4,7 @@
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
 <head>
+  <script src="https://cdn.optimizely.com/js/8244554975.js"></script>
   <meta charset="utf-8">
   <title>HTML Email Tips and Tutorials</title>
   <meta name="description" content="HTML Email Tips and Tutorials">
@@ -23,6 +24,11 @@
     ga('create', 'UA-1284993-68', 'auto', {'allowLinker': true});
     ga('require', 'linker');
     ga('linker:autoLink', ['gumroad.com'] );  
+
+    // Optimizely Universal Analytics Integration
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push("activateUniversalAnalytics");
+    
     ga('send', 'pageview');
   </script>
 </head>
