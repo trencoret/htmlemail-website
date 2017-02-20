@@ -69,7 +69,7 @@ module.exports = function(grunt) {
     // Compress images
     imagemin: {
       options: {
-        optimizationLevel: 3
+        optimizationLevel: 5
       },
       dist: {
         files: [{
