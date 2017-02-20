@@ -24,6 +24,11 @@
     ga('create', 'UA-1284993-68', 'auto', {'allowLinker': true});
     ga('require', 'linker');
     ga('linker:autoLink', ['gumroad.com'] );  
+
+    // Optimizely Universal Analytics Integration
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push("activateUniversalAnalytics");
+    
     ga('send', 'pageview');
   </script>
 </head>
