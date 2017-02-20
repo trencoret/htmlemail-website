@@ -28,20 +28,6 @@ module.exports = function(grunt) {
 
 
 
-    // Copy font awesome fonts into relative project
-    // copy: {
-    //   font_awesome: {
-    //     expand: true,
-    //     flatten: true,
-    //     src: ['bower_components/font-awesome/fonts/*'],
-    //     dest: 'fonts'
-    //   }
-    // },
-
-
-
-
-
     //Use PostCSS Autoprefixer to apply browser prefixes for certain styles
     postcss: {
       options: {
@@ -73,6 +59,25 @@ module.exports = function(grunt) {
             symbol: true
           }
         }
+      }
+    },
+
+
+
+
+
+    // Compress images
+    imagemin: {
+      options: {
+        optimizationLevel: 3
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'img',
+          src: ['*.{png,jpg,gif}'],
+          dest: 'img'
+        }]
       }
     },
 
@@ -114,6 +119,7 @@ module.exports = function(grunt) {
       tasks: [
         'sass',
         'postcss',
+        'imagemin',
         'concat'
       ]
     },
@@ -128,6 +134,7 @@ module.exports = function(grunt) {
         'sass',
         'postcss',
         'concat',
+        'imagemin',
         'svg_sprite',
         'watch',
         'shell:jekyllServe'

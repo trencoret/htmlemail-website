@@ -67,16 +67,16 @@ module.exports = function(grunt) {
 
 
     // Compress images
-    imagemin: {                          // Task
-      options: {                       // Target options
+    imagemin: {
+      options: {
         optimizationLevel: 3
       },
-      dist: {                         // Another target
+      dist: {
         files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'img',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'img'                  // Destination path prefix
+          expand: true,
+          cwd: 'img',
+          src: ['*.{png,jpg,gif}'],
+          dest: 'img'
         }]
       }
     },
@@ -119,6 +119,7 @@ module.exports = function(grunt) {
       tasks: [
         'sass',
         'postcss',
+        'imagemin',
         'concat'
       ]
     },
@@ -133,6 +134,7 @@ module.exports = function(grunt) {
         'sass',
         'postcss',
         'concat',
+        'imagemin',
         'svg_sprite',
         'watch',
         'shell:jekyllServe'
